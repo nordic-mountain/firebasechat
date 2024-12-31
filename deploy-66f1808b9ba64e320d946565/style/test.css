@@ -1,0 +1,45 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --bg: #131414;
+    --outline: #444546;
+    --lighter-outline: #5d5f5f;
+    --opposite: #ffffff;
+}
+
+body {
+    display: flex;
+    background-color: var(--bg);
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    height: 60vh; /* Full viewport height */
+    margin: 0;
+}
+
+.comment {
+    color: var(--opposite);
+    padding: 10px;
+    display: inline-block;  
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.together {
+    display: inline-block; 
+}
+
+#name-text {
+    font-style: italic;
+    font-weight: bold;
+    font-family:'Inter'; font-size: 19px;
+    color: var(--lighter-outline);
+    margin: 0
+}
+
+#image-sent {
+    padding-left: 70px;
+}
+
+#comment-text {
+    font-family:'Inter'; font-size: 17px
+}

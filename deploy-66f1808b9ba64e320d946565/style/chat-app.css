@@ -1,0 +1,226 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+  --bg: #131414;
+  --outline: #444546;
+  --lighter-outline: #9fa3a3;
+  --opposite: #ffffff;
+  --font: "Inter"
+}
+
+
+body {
+    color: var(--opposite);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font);
+    background-color: var(--bg);
+}
+
+p {
+  font-weight: normal;
+}
+
+#message-container {
+  color: var(--opposite);
+  padding: 10px; /* Padding for aesthetics */
+  border-radius: 5px;
+  border: 2px solid var(--outline);
+  margin: auto;
+  width: 100%; /* Full width */
+  max-width: 1500px; /* Set a maximum width */
+  height: 450px;
+  text-align: justify; 
+  background-color: var(--bg);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scrollbar-width: none;
+  max-height: 450px;
+  max-height: 450px; /* Maximum height for scrolling */
+  overflow-y: auto;  /* Allow vertical scrolling */
+  overflow-x: hidden;
+
+  max-height: 450px; /* Limit height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding: 10px; /* Padding for aesthetics */
+  border: 2px solid var(--outline);
+  background-color: var(--bg);
+}
+
+#message-container p:nth-child(2n) {
+    background-color: var(--bg)
+}
+
+#message-container::-webkit-scrollbar {
+  display: none;
+}
+
+#message-container {
+  color: var(--opposite);
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--outline);
+  margin: auto;
+  width: 100%;
+  max-width: 1500px;
+  height: 450px;
+  overflow-y: auto; /* Use vertical scrolling */
+  text-align: justify; 
+  background-color: var(--bg);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#send-container {
+  top: 500px;
+  position: fixed;
+  background-color: var(--bg);
+  max-width: 1200px;
+  width: 80%;
+  display: flex;
+  align-items: flex-start; /* Align items at the start */
+}
+
+#message-input {
+  font-family: var(--font);
+  font-weight: normal;
+  width: 100%;
+  max-width: 1500px;
+  min-height: 50px; /* Minimum height */
+  padding: 10px; /* Padding for aesthetics */
+  border: 2px solid var(--outline);
+  border-radius: 10px;
+  font-size: 18px;
+  outline: none;
+  color: var(--opposite);
+  background-color: var(--bg);
+  overflow-y: auto; /* Enable vertical scrolling */
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+  word-wrap: break-word; /* Break long words */
+}
+
+.placeholder {
+  position: absolute;
+  color: #999; /* Light gray for placeholder text */
+  pointer-events: none; /* Prevent clicks on the placeholder */
+  padding: 10px; /* Match padding of the input */
+  transition: opacity 0.2s; /* Smooth transition for visibility */
+  opacity: 0; /* Initially hidden */
+}
+
+#send-container:hover .placeholder {
+  opacity: 1; /* Show placeholder when the container is hovered */
+}
+
+/* Show placeholder when input is empty */
+#message-input:empty + .placeholder {
+  opacity: 1; /* Show when empty */
+}
+
+#message-input:focus + .placeholder {
+  opacity: 0; /* Hide when focused */
+}
+
+html {
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+input {
+  font-weight: normal;
+  font-family: var(--font); font-size: 22px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid var(--outline);
+  padding: 5px 5px;
+  outline: none;
+  background-color: var(--bg);
+  color: var(--opposite);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  margin-right: 10px; /* Space between input and button */
+  height: 40px;
+}
+
+
+.highlight {
+  color: #346c83
+}
+
+#new-person-joined-text {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--lighter-outline);
+  font-family: var(--font); font-size: 17px;
+  padding-right: 10px;
+}
+
+
+
+
+#pfp-image {
+  margin-right: 10px; /* Space between image and text */
+  height: 40px; /* Set height for uniformity */
+}
+
+
+.comment-text-container {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column; /* Stack the username and comment vertically */
+  max-width: 80%; /* Prevent text from exceeding this width */
+}
+
+
+
+.comment {
+  color: var(--opposite);
+  padding: 10px;
+  display: flex; /* Use flexbox for horizontal alignment */
+  padding-left: 15px;
+  padding-right: 15px;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  white-space: normal; /* Allow wrapping */
+}
+
+#name-text {
+  font-weight: bold;
+  font-family: var(--font); 
+  font-size: 16px;
+  color: var(--lighter-outline);
+  margin: 0; /* No margin */
+  padding-top: 8px;
+}
+
+#comment-text {
+  font-weight: normal;
+  font-family: var(--font);
+  font-size: 15px;
+  text-align: justify;
+  overflow-wrap: break-word; /* Ensure long words break */
+  word-wrap: break-word; /* For compatibility */
+  white-space: normal; /* Allow wrapping */
+  margin: 0; /* Remove default margin */
+}
+
+#image-sent {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column; /* Stack the username and comment vertically */
+}
+
+.container {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column; /* Stack the username and comment vertically */
+  max-width: 20%; /* Prevent text from exceeding this width */
+}

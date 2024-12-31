@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="images/Icon-big.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title-bar">Lounge</title>
+    <link rel="stylesheet" href="style/chat-app.css">
+    <script src="https://www.gstatic.com/firebasejs/9.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x/firebase-database.js"></script>
+</head>
+<body id="body">
+    <div id="message-container" class="topright"></div>
+    <form id="send-container">
+        <textarea id="message-input" placeholder="Chat..." class="input" rows="1"></textarea>
+        <button type="submit" style="display:none;">Send</button>
+    </form>
+    <script src="scripts/chat.js" type="module"></script>
+</body>
+</html>
